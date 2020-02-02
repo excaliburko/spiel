@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Spiel</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+
+<style type="text/css">
+	.container {
+  width: 736px;
+  height: 414px;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+}
+.random_block {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.Cblock {
+  margin-right: 8px;
+  width: 240px;
+  height: 240px;
+  background: #999;
+  display: inline-block;
+  background-size: cover;
+  
+}
+
+.ersiees1{content:"1";background-image:url("img/ersiees/ersiees01.png");}
+.ersiees2{content:"2";background-image:url("img/ersiees/ersiees02.png");}
+.ersiees3{content:"3";background-image:url("img/ersiees/ersiees03.png");}
+.ersiees4{content:"4";background-image:url("img/ersiees/ersiees04.png");}
+.ersiees5{content:"5";background-image:url("img/ersiees/ersiees05.png");}
+.ersiees6{content:"6";background-image:url("img/ersiees/ersiees06.png");}
+
+.stepscount1{content:"1";background-image:url("img/count/bfly01.png");}
+.stepscount2{content:"2";background-image:url("img/count/bfly02.png");}
+.stepscount3{content:"3";background-image:url("img/count/bfly03.png");}
+.stepscount4{content:"4";background-image:url("img/count/bfly04.png");}
+.stepscount5{content:"5";background-image:url("img/count/bfly05.png");}
+.stepscount6{content:"6";background-image:url("img/count/bfly06.png");}
+
+.sentece1{content:"1";background-image:url("img/sentece/type01.png");}
+.sentece2{content:"2";background-image:url("img/sentece/type02.png");}
+.sentece3{content:"3";background-image:url("img/sentece/type03.png");}
+.sentece4{content:"4";background-image:url("img/sentece/type04.png");}
+.sentece5{content:"5";background-image:url("img/sentece/type05.png");}
+.sentece6{content:"6";background-image:url("img/sentece/type06.png");}
+
+.go {
+  width: 736px;
+  height: 173px;
+  background:#8BB530;
+  font-size: 80px;
+  color: #FFFFFF;
+  border:none;
+  transition: 150ms ease-in-out;
+}
+.go.disable{
+  background: #ddd;
+}
+ .go:active{
+   background: #ddd;
+  }
+
+</style>
+
+<div class="Container"><div class="random_block">
+    <div class="Cblock" id="ersiees"></div>
+    <div class="Cblock" id="stepscount"></div>
+    <div class="Cblock" id="sentece"></div>
+</div>
+    <button id="actionbutton" class="go">Spiel</button>
+</div>
+
+
+
+<script type="text/javascript">
+  $("#actionbutton").click(function() {
+  var x = Math.floor(Math.random() * 6) + 1,
+  y = Math.floor(Math.random() * 6) + 1,
+  z = Math.floor(Math.random() * 6) + 1,
+    class1 = "Cblock " + "ersiees" + x;
+    class2 = "Cblock " + "stepscount" + y;
+    class3 = "Cblock " + "sentece" + z;
+
+  $("#ersiees")
+    .removeClass()
+    .addClass(class1);
+    $("#stepscount") .removeClass()
+    .addClass(class2);
+    $("#sentece") .removeClass()
+    .addClass(class3);
+    $("#actionbutton").disable;
+});
+
+
+</script>
+</body>
+</html>
