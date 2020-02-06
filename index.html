@@ -8,25 +8,33 @@
 <body>
 
 <style type="text/css">
-	.container {
-  width: 736px;
+  body{
+    margin:0 auto;
+    padding:0;
+    background-color: #2e5725
+  }
+	.Container {
+    margin: auto;
+  /*width: 745px;*/
+  overflow-wrap: hidden;
+  width: 720px;
   height: 414px;
-  margin: 0;
+  /*margin: 0;*/
   padding: 0;
   background: #fafafa;
 }
 .random_block {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
 }
 .Cblock {
-  margin-right: 8px;
+  /*margin-right: 8px;*/
   width: 240px;
   height: 240px;
-  background: #999;
+  background: #fff;
   display: inline-block;
-  background-size: cover;
+  background-size: contain;
   
 }
 
@@ -52,7 +60,7 @@
 .sentece6{content:"6";background-image:url("img/sentece/type06.png");}
 
 .go {
-  width: 736px;
+  width: 720px;
   height: 173px;
   background:#8BB530;
   font-size: 80px;
